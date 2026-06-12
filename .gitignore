@@ -1,0 +1,16 @@
+.nuxt
+.output
+dist
+node_modules
+.npm-cache
+.env
+.env.*
+!.env.example
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+.nuxt-dev*.log
+.nuxt-preview*.log
+.qa-*.log
+qa-*.png
+.edge-profile*
