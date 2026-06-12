@@ -9,12 +9,14 @@ const props = defineProps<{
 }>()
 
 const runtimeConfig = useRuntimeConfig()
-const avatarUrl = computed(() => {
+function toPublicUrl(path: string) {
   const baseURL = runtimeConfig.app.baseURL.replace(/\/$/, '')
-  const avatarPath = props.profile.avatar.startsWith('/') ? props.profile.avatar : `/${props.profile.avatar}`
+  const publicPath = path.startsWith('/') ? path : `/${path}`
 
-  return `${baseURL}${avatarPath}`
-})
+  return `${baseURL}${publicPath}`
+}
+
+const avatarUrl = computed(() => toPublicUrl(props.profile.avatar))
 
 const heroRef = ref<HTMLElement | null>(null)
 const codeCards = ref<HTMLElement[]>([])

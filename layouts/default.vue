@@ -8,8 +8,9 @@
 
       <nav class="site-nav" aria-label="主导航">
         <NuxtLink to="/">首页</NuxtLink>
+        <NuxtLink to="/#experience">经历</NuxtLink>
         <NuxtLink to="/blog">博客</NuxtLink>
-        <a href="#projects">项目</a>
+        <NuxtLink to="/#projects">项目</NuxtLink>
       </nav>
     </header>
 

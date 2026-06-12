@@ -370,6 +370,76 @@ a {
   margin-top: 38px;
 }
 
+.experience-layout {
+  align-items: start;
+}
+
+.experience-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.experience-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08);
+}
+
+.experience-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.experience-head h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.experience-head p,
+.experience-head span {
+  margin: 0;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.experience-head span {
+  white-space: nowrap;
+}
+
+.experience-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-card li {
+  position: relative;
+  padding-left: 16px;
+  color: #383c43;
+  line-height: 1.75;
+}
+
+.experience-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.education-card {
+  background: #fffaf0;
+}
+
 .project-card,
 .post-card {
   padding: 24px;
@@ -580,6 +650,7 @@ a {
   }
 
   .section-heading-row,
+  .experience-head,
   .cta-layout {
     align-items: flex-start;
     flex-direction: column;

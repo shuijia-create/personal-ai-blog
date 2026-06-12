@@ -2,39 +2,71 @@ import type { BlogPost, Profile, Project } from '../../types/content'
 
 export const profile: Profile = {
   name: '税嘉',
-  title: '前端开发工程师 / AI 应用实践者',
-  location: '四川 / 可远程',
+  title: '前端开发工程师 / 跨端客户端 / AI 应用 / Nuxt 全栈方向',
+  location: '四川 / 前端、跨端、企业信息化方向',
   summary:
-    '5 年前端开发经验，长期做 Vue 后台、微信小程序、企业微信侧边栏、Electron 客户端和 Nuxt 全栈项目。最近重点学习 Dify、RAG、OpenAI Agents SDK、LangGraph 和 Codex，把 AI 工具真正接到业务系统里。',
+    '5 年以上前端开发经验，长期参与 B 端后台、H5、微信小程序、企业微信侧边栏、Electron 桌面客户端等多端业务建设。熟悉 Vue2/Vue3、TypeScript、组件封装、权限路由、接口联调、WebSocket 实时通信和跨端兼容处理，也具备 Nuxt 全栈、Dify/RAG、AI 客服与 Codex 辅助开发实践。',
   avatar: '/avatar.png',
   highlights: [
-    'Vue2 / Vue3 / TypeScript / Nuxt 全栈',
-    '小程序、企微侧边栏、Electron 客户端',
-    'Dify RAG、AI 客服、流式输出、工具调用',
-    '用 Codex 辅助拆需求、写代码、排查接口'
+    '5年以上前端开发经验，覆盖 B 端后台、H5、小程序、企微侧边栏、Electron',
+    'Vue2 / Vue3 / TypeScript / Element Plus / Vant / Pinia / Vite',
+    'Electron IPC、自动更新、NSIS 安装包、主应用与子应用通信',
+    'Nuxt 4 + Nitro API + Prisma / MariaDB + Redis Session 全栈实践',
+    'Dify / RAG / AI 客服 / 流式输出 / Codex 辅助开发'
   ],
   skills: [
     {
-      name: '前端工程',
-      items: ['Vue3', 'TypeScript', 'Nuxt', 'Pinia', 'Vite', 'Element Plus']
+      name: '前端基础',
+      items: ['HTML', 'CSS', 'JavaScript', 'ES6+', 'TypeScript', '响应式布局', '移动端适配']
     },
     {
-      name: '跨端业务',
-      items: ['微信小程序', '企业微信侧边栏', 'Electron', 'H5', 'JSBridge']
+      name: 'Vue 技术栈',
+      items: ['Vue2', 'Vue3', 'Nuxt', 'Vuex', 'Pinia', 'Vue Router', 'Vite', 'Element Plus', 'Vant']
+    },
+    {
+      name: '跨端能力',
+      items: ['Electron', '微信小程序', '企业微信侧边栏', 'H5', 'uni-app', 'JSBridge', '企业微信 JS-SDK']
+    },
+    {
+      name: '工程与全栈',
+      items: ['组件封装', '接口封装', '动态路由权限', 'WebSocket', 'Git', '自动更新', 'Nuxt server/api', 'Prisma']
     },
     {
       name: 'AI 应用',
-      items: ['Dify', 'RAG', 'OpenAI API', 'Agents SDK', 'LangGraph', 'Codex']
-    },
-    {
-      name: '后端基础',
-      items: ['Nitro API', 'Flask', 'Redis Session', 'Prisma', 'MariaDB', 'Zod']
+      items: ['Dify', 'RAG 知识库', 'AI 客服', '流式输出', 'Python Flask API', 'OpenAI Codex', 'AI Vibe Coding']
     }
   ],
   socials: [
     { label: 'GitHub', href: 'https://github.com/' },
     { label: 'Email', href: 'mailto:hello@example.com' }
-  ]
+  ],
+  experience: [
+    {
+      company: '成都先生科技',
+      role: '前端开发工程师',
+      period: '2022.03 - 至今',
+      points: [
+        '参与 B 端后台、Electron 客户端、企业微信侧边栏、小程序和 H5 项目开发，负责核心页面、业务模块、接口联调和多端兼容处理。',
+        '与产品、UI、后端协同完成需求拆解、排期评估和交互还原，推动业务从原型到上线落地。',
+        '封装公共组件、请求方法、权限处理和页面通用逻辑，降低重复开发成本并提升维护效率。'
+      ]
+    },
+    {
+      company: '成都山莓科技公司',
+      role: '前端开发工程师',
+      period: '2021.01 - 2022.01',
+      points: [
+        '负责后台管理系统和 H5 页面开发，完成静态页面还原、接口联调、数据展示及业务交互。',
+        '参与项目框架搭建和公共组件封装，配合后端完成订单、售后、实时通讯等业务模块开发。'
+      ]
+    }
+  ],
+  education: {
+    school: '南充职业技术学院',
+    major: '计算机应用技术',
+    degree: '专科',
+    period: '2017.09 - 2020.09'
+  }
 }
 
 export const projects: Project[] = [

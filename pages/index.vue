@@ -15,6 +15,8 @@ useHead({
 const profile = computed(() => profileResult.value?.data)
 const projects = computed(() => projectsResult.value?.data ?? [])
 const posts = computed(() => postsResult.value?.data ?? [])
+const experience = computed(() => profile.value?.experience ?? [])
+const education = computed(() => profile.value?.education)
 </script>
 
 <template>
@@ -35,6 +37,40 @@ const posts = computed(() => postsResult.value?.data ?? [])
             summary="不是只会调用模型，而是能把页面、接口、权限、流式输出和业务流程接起来。"
           />
           <SkillMatrix :skills="profile.skills" />
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container two-column experience-layout">
+          <SectionTitle
+            eyebrow="Experience"
+            title="工作经历与教育背景"
+            summary="长期围绕前端工程、跨端客户端、企业微信业务和后台系统落地，从页面、组件、接口到上线流程都有实际项目经验。"
+          />
+          <div class="experience-stack">
+            <article v-for="item in experience" :key="item.company" class="experience-card reveal-panel">
+              <div class="experience-head">
+                <div>
+                  <h3>{{ item.company }}</h3>
+                  <p>{{ item.role }}</p>
+                </div>
+                <span>{{ item.period }}</span>
+              </div>
+              <ul>
+                <li v-for="point in item.points" :key="point">{{ point }}</li>
+              </ul>
+            </article>
+
+            <article v-if="education" class="experience-card education-card reveal-panel">
+              <div class="experience-head">
+                <div>
+                  <h3>{{ education.school }}</h3>
+                  <p>{{ education.major }} / {{ education.degree }}</p>
+                </div>
+                <span>{{ education.period }}</span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 

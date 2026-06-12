@@ -7,6 +7,8 @@ export interface Profile {
   highlights: string[]
   skills: SkillGroup[]
   socials: SocialLink[]
+  experience: WorkExperience[]
+  education: Education
 }
 
 export interface SkillGroup {
@@ -17,6 +19,20 @@ export interface SkillGroup {
 export interface SocialLink {
   label: string
   href: string
+}
+
+export interface WorkExperience {
+  company: string
+  role: string
+  period: string
+  points: string[]
+}
+
+export interface Education {
+  school: string
+  major: string
+  degree: string
+  period: string
 }
 
 export interface Project {
