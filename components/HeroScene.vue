@@ -8,6 +8,14 @@ const props = defineProps<{
   profile: Profile
 }>()
 
+const runtimeConfig = useRuntimeConfig()
+const avatarUrl = computed(() => {
+  const baseURL = runtimeConfig.app.baseURL.replace(/\/$/, '')
+  const avatarPath = props.profile.avatar.startsWith('/') ? props.profile.avatar : `/${props.profile.avatar}`
+
+  return `${baseURL}${avatarPath}`
+})
+
 const heroRef = ref<HTMLElement | null>(null)
 const codeCards = ref<HTMLElement[]>([])
 let context: gsap.Context | null = null
@@ -59,7 +67,7 @@ onUnmounted(() => {
 
 <template>
   <section ref="heroRef" class="hero">
-    <div class="hero-backdrop" :style="{ backgroundImage: `url(${props.profile.avatar})` }" />
+    <div class="hero-backdrop" :style="{ backgroundImage: `url(${avatarUrl})` }" />
     <div class="hero-overlay" />
 
     <div class="hero-content">
