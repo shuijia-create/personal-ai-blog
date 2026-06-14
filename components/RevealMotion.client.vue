@@ -5,6 +5,12 @@ let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   const panels = gsap.utils.toArray<HTMLElement>('.reveal-panel')
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (reducedMotion) {
+    gsap.set(panels, { y: 0, scale: 1, rotateX: 0 })
+    return
+  }
 
   const activeObserver = new IntersectionObserver(
     (entries) => {
@@ -15,8 +21,9 @@ onMounted(() => {
 
         gsap.to(entry.target, {
           y: 0,
-          opacity: 1,
-          duration: 0.7,
+          scale: 1,
+          rotateX: 0,
+          duration: 0.85,
           ease: 'power3.out'
         })
 
@@ -29,7 +36,13 @@ onMounted(() => {
   observer = activeObserver
 
   panels.forEach((panel) => {
-    gsap.set(panel, { y: 30, opacity: 0 })
+    gsap.set(panel, {
+      y: 34,
+      scale: 0.97,
+      rotateX: 6,
+      transformPerspective: 900,
+      transformOrigin: '50% 100%'
+    })
     activeObserver.observe(panel)
   })
 })

@@ -17,6 +17,13 @@ const projects = computed(() => projectsResult.value?.data ?? [])
 const posts = computed(() => postsResult.value?.data ?? [])
 const experience = computed(() => profile.value?.experience ?? [])
 const education = computed(() => profile.value?.education)
+const contactHref = computed(
+  () =>
+    profile.value?.socials.find((item) => item.label.toLowerCase() === 'email')?.href ??
+    profile.value?.socials.find((item) => item.label.toLowerCase() === 'github')?.href ??
+    '#projects'
+)
+const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '联系我' : 'GitHub 联系'))
 </script>
 
 <template>
@@ -105,7 +112,14 @@ const education = computed(() => profile.value?.education)
             <p class="eyebrow">Contact</p>
             <h2>需要一个能写前端、懂接口、愿意把 AI 接进业务的人</h2>
           </div>
-          <a class="button primary" href="mailto:hello@example.com">联系我</a>
+          <a
+            class="button primary"
+            :href="contactHref"
+            :target="contactHref.startsWith('http') ? '_blank' : undefined"
+            :rel="contactHref.startsWith('http') ? 'noreferrer' : undefined"
+          >
+            {{ contactLabel }}
+          </a>
         </div>
       </section>
 

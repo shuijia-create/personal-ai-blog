@@ -37,8 +37,7 @@ export const profile: Profile = {
     }
   ],
   socials: [
-    { label: 'GitHub', href: 'https://github.com/' },
-    { label: 'Email', href: 'mailto:hello@example.com' }
+    { label: 'GitHub', href: 'https://github.com/shuijia-create' }
   ],
   experience: [
     {
