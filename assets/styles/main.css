@@ -1172,6 +1172,14 @@ a {
   max-width: 780px;
 }
 
+.cta-summary {
+  max-width: 640px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
 .cta-actions {
   align-self: start;
 }

@@ -14,7 +14,7 @@ const activeFocus = computed(() => props.focusAreas.find((item) => item.id === a
 <template>
   <div class="focus-layout">
     <div class="focus-card reveal-panel">
-      <div class="focus-tabs" role="tablist" aria-label="岗位方向">
+      <div class="focus-tabs" role="tablist" aria-label="能力方向">
         <button
           v-for="item in focusAreas"
           :key="item.id"
@@ -29,7 +29,7 @@ const activeFocus = computed(() => props.focusAreas.find((item) => item.id === a
       </div>
 
       <article v-if="activeFocus" class="focus-detail">
-        <p class="eyebrow">Match</p>
+        <p class="eyebrow">Capability</p>
         <h3>{{ activeFocus.title }}</h3>
         <p>{{ activeFocus.summary }}</p>
         <ul>
@@ -44,7 +44,7 @@ const activeFocus = computed(() => props.focusAreas.find((item) => item.id === a
     <div class="timeline-card reveal-panel">
       <div class="timeline-title">
         <Layers3 :size="20" />
-        <span>成长路线</span>
+        <span>能力路径</span>
       </div>
       <div class="timeline-list">
         <article v-for="item in timeline" :key="item.title" class="timeline-item">

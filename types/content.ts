@@ -9,8 +9,6 @@ export interface Profile {
   skills: SkillGroup[]
   focusAreas: FocusArea[]
   timeline: TimelineItem[]
-  faqs: FaqItem[]
-  contactPitches: ContactPitch[]
   socials: SocialLink[]
   experience: WorkExperience[]
   education: Education
@@ -40,18 +38,6 @@ export interface TimelineItem {
   title: string
   description: string
   items: string[]
-}
-
-export interface FaqItem {
-  question: string
-  answer: string
-}
-
-export interface ContactPitch {
-  id: string
-  label: string
-  title: string
-  message: string
 }
 
 export interface SocialLink {

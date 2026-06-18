@@ -19,9 +19,6 @@ const experience = computed(() => profile.value?.experience ?? [])
 const education = computed(() => profile.value?.education)
 const focusAreas = computed(() => profile.value?.focusAreas ?? [])
 const timeline = computed(() => profile.value?.timeline ?? [])
-const faqs = computed(() => profile.value?.faqs ?? [])
-const contactPitches = computed(() => profile.value?.contactPitches ?? [])
-const socials = computed(() => profile.value?.socials ?? [])
 const contactHref = computed(
   () =>
     profile.value?.socials.find((item) => item.label.toLowerCase() === 'email')?.href ??
@@ -45,8 +42,8 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
         <div class="container two-column">
           <SectionTitle
             eyebrow="About"
-            title="我把前端经验转成能落地的 AI 应用能力"
-            summary="不是只会调用模型，而是能把页面、接口、权限、流式输出和业务流程接起来。"
+            title="自我介绍"
+            summary="我是一名前端开发工程师，主要做 Vue 技术栈、B 端后台、多端业务和 Electron 客户端开发，也在持续学习 Nuxt 全栈与 AI 应用接入。"
           />
           <SkillMatrix :skills="profile.skills" />
         </div>
@@ -55,9 +52,9 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
       <section id="fit" class="section">
         <div class="container">
           <SectionTitle
-            eyebrow="Fit"
-            title="按岗位方向看我的能力证据"
-            summary="前端、AI 应用、Nuxt 全栈、Electron 都不是空写名词，每个方向都对应具体项目和可解释的技术点。"
+            eyebrow="Capability"
+            title="核心能力与交付范围"
+            summary="从业务页面、组件封装、接口联调到跨端兼容和 AI 应用接入，我更关注功能能否稳定落地、便于维护。"
           />
           <FocusExplorer :focus-areas="focusAreas" :timeline="timeline" />
         </div>
@@ -113,8 +110,8 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
           <div class="section-heading-row">
             <SectionTitle
               eyebrow="Writing"
-              title="学习和项目笔记"
-              summary="记录我从前端转 AI Agent / 全栈应用的过程。"
+              title="技术文章与项目记录"
+              summary="围绕 Vue、Nuxt、Dify、RAG、Agent 和工程化做一些持续整理。"
             />
             <NuxtLink class="button compact" to="/blog">全部文章</NuxtLink>
           </div>
@@ -122,22 +119,14 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
         </div>
       </section>
 
-      <section class="section">
-        <div class="container two-column faq-layout">
-          <SectionTitle
-            eyebrow="FAQ"
-            title="面试官可能会关心的问题"
-            summary="公司项目怎么写、AI 辅助开发怎么说、当前适合投什么岗位，都先讲清楚。"
-          />
-          <FaqAccordion :items="faqs" />
-        </div>
-      </section>
-
       <section class="section cta-section">
         <div class="container cta-layout">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>需要一个能写前端、懂接口、愿意把 AI 接进业务的人</h2>
+            <h2>感谢查看我的个人介绍和项目记录</h2>
+            <p class="cta-summary">
+              如果需要进一步了解项目细节，可以通过 GitHub 查看源码和更新记录。
+            </p>
           </div>
           <div class="cta-actions">
             <a
@@ -149,7 +138,6 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
               {{ contactLabel }}
             </a>
           </div>
-          <ContactBuilder :pitches="contactPitches" :socials="socials" />
         </div>
       </section>
 

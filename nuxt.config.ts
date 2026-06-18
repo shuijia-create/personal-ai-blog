@@ -6,7 +6,7 @@ const blogRoutes = [
   '/blog/how-i-use-codex',
   '/blog/dify-rag-notes',
   '/blog/nuxt-fullstack-roadmap',
-  '/blog/resume-project-desensitization',
+  '/blog/enterprise-frontend-practice',
   '/blog/frontend-to-agent-learning'
 ]
 
