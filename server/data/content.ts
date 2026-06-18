@@ -115,6 +115,7 @@ export const profile: Profile = {
     }
   ],
   socials: [
+    { label: 'Email', href: 'mailto:1078620612@qq.com' },
     { label: 'GitHub', href: 'https://github.com/shuijia-create' }
   ],
   experience: [

@@ -1180,6 +1180,15 @@ a {
   line-height: 1.8;
 }
 
+.contact-email {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 18px;
+  border-bottom: 1px solid rgba(242, 201, 76, 0.6);
+  color: #f7df7b;
+  font-weight: 900;
+}
+
 .cta-actions {
   align-self: start;
 }

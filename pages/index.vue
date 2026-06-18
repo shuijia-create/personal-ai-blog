@@ -26,6 +26,8 @@ const contactHref = computed(
     '#projects'
 )
 const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '联系我' : 'GitHub 联系'))
+const emailHref = computed(() => profile.value?.socials.find((item) => item.label.toLowerCase() === 'email')?.href)
+const emailText = computed(() => emailHref.value?.replace('mailto:', '') ?? '')
 </script>
 
 <template>
@@ -127,6 +129,9 @@ const contactLabel = computed(() => (contactHref.value.startsWith('mailto:') ? '
             <p class="cta-summary">
               如果需要进一步了解项目细节，可以通过 GitHub 查看源码和更新记录。
             </p>
+            <a v-if="emailHref" class="contact-email" :href="emailHref">
+              邮箱：{{ emailText }}
+            </a>
           </div>
           <div class="cta-actions">
             <a
