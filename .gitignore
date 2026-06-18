@@ -1,5 +1,7 @@
 .nuxt
+.nuxt-*
 .output
+.output-*
 dist
 node_modules
 .npm-cache

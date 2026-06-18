@@ -4,16 +4,54 @@ export interface Profile {
   location: string
   summary: string
   avatar: string
+  metrics: ProfileMetric[]
   highlights: string[]
   skills: SkillGroup[]
+  focusAreas: FocusArea[]
+  timeline: TimelineItem[]
+  faqs: FaqItem[]
+  contactPitches: ContactPitch[]
   socials: SocialLink[]
   experience: WorkExperience[]
   education: Education
 }
 
+export interface ProfileMetric {
+  value: string
+  label: string
+  detail: string
+}
+
 export interface SkillGroup {
   name: string
   items: string[]
+}
+
+export interface FocusArea {
+  id: string
+  label: string
+  title: string
+  summary: string
+  proof: string[]
+}
+
+export interface TimelineItem {
+  period: string
+  title: string
+  description: string
+  items: string[]
+}
+
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
+export interface ContactPitch {
+  id: string
+  label: string
+  title: string
+  message: string
 }
 
 export interface SocialLink {
@@ -39,9 +77,13 @@ export interface Project {
   id: string
   name: string
   role: string
+  category: string
+  year: string
+  status: string
   summary: string
   stack: string[]
   impact: string[]
+  detail: string[]
 }
 
 export interface BlogPost {

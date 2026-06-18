@@ -144,17 +144,9 @@ onUnmounted(() => {
       </div>
 
       <div class="hero-metrics" aria-label="核心经验">
-        <div>
-          <strong>5+</strong>
-          <span>年前端</span>
-        </div>
-        <div>
-          <strong>6</strong>
-          <span>类端侧场景</span>
-        </div>
-        <div>
-          <strong>AI</strong>
-          <span>落地实践</span>
+        <div v-for="metric in props.profile.metrics" :key="metric.label" :title="metric.detail">
+          <strong>{{ metric.value }}</strong>
+          <span>{{ metric.label }}</span>
         </div>
       </div>
     </div>
