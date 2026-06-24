@@ -3,11 +3,11 @@ declare const process: {
 }
 
 const blogRoutes = [
-  '/blog/how-i-use-codex',
-  '/blog/dify-rag-notes',
-  '/blog/nuxt-fullstack-roadmap',
+  '/blog/wechat-sidebar-practice',
+  '/blog/nuxt-admin-auth-rbac',
   '/blog/enterprise-frontend-practice',
-  '/blog/frontend-to-agent-learning'
+  '/blog/electron-client-notes',
+  '/blog/dify-rag-notes',
 ]
 
 export default defineNuxtConfig({
@@ -19,11 +19,11 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
-      title: '税嘉 | 前端开发与 AI 应用',
+      title: '税嘉 | Vue 前端开发工程师',
       meta: [
         {
           name: 'description',
-          content: '税嘉的个人介绍、前端项目、Nuxt 全栈实践和 AI 应用博客。'
+          content: '税嘉的个人介绍、Vue 前端项目、企业微信侧边栏、Nuxt 后台、Electron 和跨端业务实践。'
         }
       ]
     }

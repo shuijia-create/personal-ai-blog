@@ -32,13 +32,13 @@ const filteredPosts = computed(() => {
         <SectionTitle
           eyebrow="Blog"
           title="项目复盘和学习笔记"
-          summary="围绕 Vue、Nuxt、Dify、RAG、Agent 和工程化持续整理。"
+          summary="围绕 Vue、Nuxt、企业微信侧边栏、Electron、后台权限和工程化持续整理。"
         />
 
         <div class="blog-toolbar reveal-panel">
           <label class="search-field">
             <span>搜索文章</span>
-            <input v-model="searchText" type="search" placeholder="输入 Nuxt、Dify、Agent..." />
+            <input v-model="searchText" type="search" placeholder="输入 Vue、Nuxt、企业微信..." />
           </label>
           <div class="blog-tags" role="tablist" aria-label="文章标签">
             <button

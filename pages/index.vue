@@ -9,7 +9,7 @@ const [{ data: profileResult, error: profileError }, { data: projectsResult }, {
   ])
 
 useHead({
-  title: '税嘉 | 前端开发与 AI 应用'
+  title: '税嘉 | Vue 前端开发工程师'
 })
 
 const profile = computed(() => profileResult.value?.data)
@@ -45,7 +45,7 @@ const emailText = computed(() => emailHref.value?.replace('mailto:', '') ?? '')
           <SectionTitle
             eyebrow="About"
             title="自我介绍"
-            summary="我是一名前端开发工程师，主要做 Vue 技术栈、B 端后台、多端业务和 Electron 客户端开发，也在持续学习 Nuxt 全栈与 AI 应用接入。"
+            summary="我是一名前端开发工程师，主要做 Vue 技术栈、B 端后台、企业微信侧边栏、微信小程序、移动 H5 和 Electron 客户端开发，也在持续补强 Nuxt 全栈后台能力。"
           />
           <SkillMatrix :skills="profile.skills" />
         </div>
@@ -56,7 +56,7 @@ const emailText = computed(() => emailHref.value?.replace('mailto:', '') ?? '')
           <SectionTitle
             eyebrow="Capability"
             title="核心能力与交付范围"
-            summary="从业务页面、组件封装、接口联调到跨端兼容和 AI 应用接入，我更关注功能能否稳定落地、便于维护。"
+            summary="从业务页面、组件封装、接口联调到跨端兼容和权限链路，我更关注功能能否稳定落地、便于维护。"
           />
           <FocusExplorer :focus-areas="focusAreas" :timeline="timeline" />
         </div>
@@ -101,7 +101,7 @@ const emailText = computed(() => emailHref.value?.replace('mailto:', '') ?? '')
           <SectionTitle
             eyebrow="Projects"
             title="近期重点项目"
-            summary="这些项目覆盖后台系统、AI 客服、Electron 客户端和跨端业务。"
+            summary="这些项目覆盖企业微信侧边栏、Nuxt 后台、小程序/H5、Electron 客户端和 B 端管理系统。"
           />
           <ProjectShowcase :projects="projects" />
         </div>
@@ -113,7 +113,7 @@ const emailText = computed(() => emailHref.value?.replace('mailto:', '') ?? '')
             <SectionTitle
               eyebrow="Writing"
               title="技术文章与项目记录"
-              summary="围绕 Vue、Nuxt、Dify、RAG、Agent 和工程化做一些持续整理。"
+              summary="围绕 Vue、Nuxt、企业微信侧边栏、Electron、后台权限和工程化做一些持续整理。"
             />
             <NuxtLink class="button compact" to="/blog">全部文章</NuxtLink>
           </div>

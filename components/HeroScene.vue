@@ -119,7 +119,7 @@ onUnmounted(() => {
     <div class="hero-content">
       <p class="hero-kicker">
         <Sparkles :size="18" />
-        Vue / Nuxt / AI 应用
+        Vue / TypeScript / 跨端应用
       </p>
       <div
         class="mobile-portrait-card"
